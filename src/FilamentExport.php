@@ -76,7 +76,7 @@ class FilamentExport
         if ($this->isTableColumnsDisabled()) {
             $tableColumns = [];
         } else {
-            $tableColumns = $this->shouldShowHiddenColumns() ? $this->getTable()->getLivewire()->getCachedTableColumns() : $this->getTable()->getColumns();
+            $tableColumns = $this->getTable()->getColumns();
         }
 
         $columns = collect($tableColumns);
